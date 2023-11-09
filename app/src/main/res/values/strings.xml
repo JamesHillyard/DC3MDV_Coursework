@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Wellness</string>
+    <string name="forgotPassword_label">Forgot Password?</string>
+</resources>
