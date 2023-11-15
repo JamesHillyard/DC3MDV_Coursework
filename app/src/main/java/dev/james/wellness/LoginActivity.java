@@ -1,8 +1,8 @@
 package dev.james.wellness;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.text.HtmlCompat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -16,30 +16,40 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login);
 
+        // Login
         TextView username = findViewById(R.id.username);
         TextView password = findViewById(R.id.password);
         Button loginButton = findViewById(R.id.loginButton);
 
         loginButton.setOnClickListener(view -> {
             if (validCredentials(username, password)) {
-                Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(MainActivity.this, "Username Or Password Incorrect", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Username Or Password Incorrect", Toast.LENGTH_SHORT).show();
             }
         });
 
+        // Terms Of Use and Privacy Policy
         TextView termsOfUse = findViewById(R.id.termsOfUse);
         TextView privacyPolicy = findViewById(R.id.privacyPolicy);
 
         termsOfUse.setOnClickListener(this::showTermsOfUsePopup);
         privacyPolicy.setOnClickListener(this::showPrivacyPolicyPopup);
+
+        // Sign Up
+        TextView signUpTextView = findViewById(R.id.signUp);
+
+        signUpTextView.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+            startActivity(intent);
+        });
 
     }
 

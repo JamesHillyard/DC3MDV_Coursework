@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <!--  Sign Up Label  -->
+    <TextView
+        android:id="@+id/signuplabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_label"
+        android:textColor="@color/titleBlue"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_margin="50dp"
+        android:gravity="center"/>
+
+    <!--  Username  -->
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signuplabel"
+        android:inputType="text"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="Username" />
+
+    <!--  Password and Forgot Password Label  -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:inputType="textPassword"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="30dp"
+        android:hint="Password" />
+
+
+    <!-- Accept Terms and Conditions -->
+    <CheckBox
+        android:id="@+id/termsAndConditionsCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_marginStart="25dp"
+        android:text="Accept Terms and Conditions" />
+
+    <!--  Signup Button  -->
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/termsAndConditionsCheckbox"
+        android:layout_alignStart="@+id/password"
+        android:layout_alignEnd="@+id/password"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/titleBlue"
+        android:text="@string/sign_up_label" />
+
+</RelativeLayout>
