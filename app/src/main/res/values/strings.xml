@@ -1,4 +1,75 @@
 <resources>
     <string name="app_name">Wellness</string>
     <string name="forgotPassword_label">Forgot Password?</string>
+    <string name="terms_of_use">
+        <![CDATA[
+            <b>Terms of Service</b><br/>
+            Effective Date: 23/10/2023<br/><br/>
+
+            Please read these Terms of Service ("Terms") carefully before using the services provided by %1$s. By accessing or using our services, you agree to be bound by these Terms, including our Privacy Policy, and any additional terms or conditions that may be referenced herein. If you do not agree with these Terms, please do not use our services.<br/><br/>
+
+            <b>1. Acceptance of Terms</b><br/>
+            By using %1$s services, you acknowledge that you have read and understood these Terms and agree to be bound by them. You must be at least 18 years old or have the legal capacity to enter into these Terms on behalf of yourself or an organization to use our services.<br/><br/>
+
+            <b>2. Service Description</b><br/>
+            %1$s provides various services designed to help individuals improve their lifestyle.<br/><br/>
+
+            <b>3. User Accounts</b><br/>
+            You may need to create a user account to access certain features of our services. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete. You are responsible for any activity that occurs on your account.<br/><br/>
+
+            <b>4. Privacy</b><br/>
+            Your use of our services is also governed by our Privacy Policy, which can be found on our website. By using our services, you consent to the collection and use of your information as described in the Privacy Policy.<br/><br/>
+
+            <b>5. Intellectual Property</b><br/>
+            All content provided by %1$s, including text, graphics, logos, and software, is the property of %1$s and is protected by applicable copyright and trademark laws. You agree not to use our intellectual property without our express written consent.<br/><br/>
+
+            <b>6. Termination</b><br/>
+            We reserve the right to terminate or suspend your access to our services at our sole discretion, without notice, for any violation of these Terms or for any other reason we deem appropriate.<br/><br/>
+
+            <b>7. Limitation of Liability</b><br/>
+            To the fullest extent permitted by applicable law, %1$s, its officers, employees, agents, and affiliates will not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of or in connection with your use of our services.<br/><br/>
+
+            <b>8. Changes to Terms</b><br/>
+            %1$s reserves the right to update or modify these Terms at any time. We will notify you of any changes by posting the new Terms on our website. You are responsible for regularly reviewing these Terms, and your continued use of our services constitutes your agreement to be bound by the updated Terms.<br/><br/>
+
+            By using %1$s services, you acknowledge that you have read, understood, and agreed to these Terms of Service.
+        ]]>
+    </string>
+    <string name="privacy_policy">
+        <![CDATA[
+            <b>Privacy Policy</b><br/>
+            Last Updated: 23/10/2023<br/><br/>
+
+            <b>1. Introduction</b><br/>
+            At %1$s, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of your information when you use our website.<br/><br/>
+
+            By using our website, you agree to the terms and conditions outlined in this Privacy Policy. If you do not agree with our practices, please do not use our website.<br/><br/>
+
+            <b>2. Information We Collect</b><br/>
+            <b>2.1. Personal Information</b><br/>
+            We may collect the following personal information from you:<br/><br/>
+            <ul>
+                <li>Name</li>
+                <li>Email Address</li>
+            </ul><br/><br/>
+            <b>2.2. Non-Personal Information</b><br/>
+            We may collect non-personal information, such as your browser type, IP address, and the date and time of your visit.<br/><br/>
+
+            <b>3. How We Use Your Information</b><br/>
+            <b>3.1 We may use your information for the following purposes:</b><br/>
+            - Provide a tailored experience based on your provided fitness data.<br/>
+            - To improve our website and user experience.<br/><br/>
+
+            <b>4. Security</b><br/>
+            We take reasonable steps to protect your information from unauthorized access, disclosure, alteration, or destruction. However, no data transmission or storage can be guaranteed to be 100 percent secure, so we cannot ensure or warrant the security of any information you provide to us.<br/><br/>
+
+            <b>5. Cookies</b><br/>
+            In order to provide you with a seamless and secure experience on our website, we use cookies for session management. These cookies are essential for enabling core functionalities, such as user authentication and maintaining your session while you navigate our site. They do not collect any personal information and are strictly required for the proper functioning of our website. By continuing to use our services, you consent to the use of these session management cookies.<br/><br/>
+
+            <b>6. Changes to This Privacy Policy</b><br/>
+            We may update this Privacy Policy from time to time. Any changes will be posted on our website, and the "Last Updated" date will be revised.<br/><br/>
+
+            Thank you for using %1$s. Your privacy is important to us.
+        ]]>
+    </string>
 </resources>
