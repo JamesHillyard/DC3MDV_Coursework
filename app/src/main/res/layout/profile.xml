@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <!--  Profile Label  -->
+    <TextView
+        android:id="@+id/profileLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="@color/titleBlue"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_margin="50dp"
+        android:gravity="center"/>
+
+    <!--  Target Weight  -->
+    <LinearLayout
+        android:id="@+id/weightInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:layout_below="@id/profileLabel"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/weightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/supportTextGray"
+            android:text="Target Weight: "/>
+
+        <SeekBar
+            android:id="@+id/weightSlider"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:max="150"
+            android:progressTint="@color/subtleBlue"
+            android:thumbTint="@color/titleBlue" />
+
+        <TextView
+            android:id="@+id/weightValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/supportTextGray"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/weightUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/supportTextGray"
+            android:text="@string/unit_weight"/>
+
+    </LinearLayout>
+
+    <!--  Target Steps  -->
+    <LinearLayout
+        android:id="@+id/stepsInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:layout_below="@id/weightInput"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/stepsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/supportTextGray"
+            android:text="Target Steps: "/>
+
+        <SeekBar
+            android:id="@+id/stepsSlider"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:max="20000"
+            android:progressTint="@color/subtleBlue"
+            android:thumbTint="@color/titleBlue" />
+
+        <TextView
+            android:id="@+id/stepsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/supportTextGray"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/stepsUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/supportTextGray"
+            android:text="@string/unit_steps"/>
+
+    </LinearLayout>
+
+    <!--  Target Sleep  -->
+    <LinearLayout
+        android:id="@+id/sleepInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:layout_below="@id/stepsInput"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/sleepLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/supportTextGray"
+            android:text="Target Sleep: "/>
+
+        <SeekBar
+            android:id="@+id/sleepSlider"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:max="12"
+            android:progressTint="@color/subtleBlue"
+            android:thumbTint="@color/titleBlue" />
+
+        <TextView
+            android:id="@+id/sleepValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/supportTextGray"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/sleepUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/supportTextGray"
+            android:text="@string/unit_sleep"/>
+
+    </LinearLayout>
+
+    <!--  Submit Button  -->
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/sleepInput"
+        android:layout_alignStart="@+id/weightInput"
+        android:layout_alignEnd="@+id/weightInput"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/titleBlue"
+        android:text="@string/submit_label" />
+
+</RelativeLayout>

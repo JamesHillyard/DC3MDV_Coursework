@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="supportTextGray">#6A6868</color>
     <color name="titleBlue">#227FDC</color>
+    <color name="subtleBlue">#689BCF</color>
     <color name="backgroundBlue">#E5EDF4</color>
 </resources>
