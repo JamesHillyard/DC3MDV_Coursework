@@ -18,159 +18,299 @@
         android:layout_margin="50dp"
         android:gravity="center"/>
 
-    <!--  Target Weight  -->
-    <LinearLayout
-        android:id="@+id/weightInput"
+    <!--  Weight Brief  -->
+    <RelativeLayout
+        android:id="@+id/weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:gravity="center"
         android:layout_below="@id/profileLabel"
-        android:layout_marginTop="10dp">
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#ECECEC"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <TextView
-            android:id="@+id/weightLabel"
+            android:id="@+id/weightGoalsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="3dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/supportTextGray"
-            android:text="Target Weight: "/>
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Weight Goals"
+            android:textColor="@color/titleBlue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <SeekBar
-            android:id="@+id/weightSlider"
-            android:layout_width="200sp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weightCard"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="150"
-            android:progressTint="@color/subtleBlue"
-            android:thumbTint="@color/titleBlue" />
+            android:layout_below="@id/weightGoalsLabel"
+            app:cardBackgroundColor="#ECECEC">
 
-        <TextView
-            android:id="@+id/weightValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/supportTextGray"
-            android:text="0"/>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weightGoalsLabel"
+                android:columnCount="3"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
 
-        <TextView
-            android:id="@+id/weightUnit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/supportTextGray"
-            android:text="@string/unit_weight"/>
+                <!-- Current Weight -->
+                <ImageView
+                    android:id="@+id/currentWeightIcon_weight"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@android:drawable/ic_menu_info_details" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/currentWeightLabel_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:text="Current Weight"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-    <!--  Target Steps  -->
-    <LinearLayout
-        android:id="@+id/stepsInput"
+                <TextView
+                    android:id="@+id/currentWeightValue_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="90 kg"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+                <!-- Goal Weight -->
+                <ImageView
+                    android:id="@+id/goalWeightIcon_weight"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@android:drawable/ic_menu_compass" />
+
+                <TextView
+                    android:id="@+id/goalWeightLabel_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:text="Goal Weight"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/goalWeightValue_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="80 kg"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+                <!-- Weekly Goal -->
+                <ImageView
+                    android:id="@+id/weeklyGoalIcon_weight"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@android:drawable/ic_menu_view" />
+
+                <TextView
+                    android:id="@+id/weeklyGoalLabel_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:text="Weekly Goal"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/weeklyGoalValue_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Lose 0.5 kg/week"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/steps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
         android:gravity="center"
-        android:layout_below="@id/weightInput"
-        android:layout_marginTop="40dp">
+        android:layout_below="@id/weight"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#ECECEC">
 
         <TextView
-            android:id="@+id/stepsLabel"
+            android:id="@+id/stepsGoalsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="3dp"
-            android:textSize="16sp"
+            android:text="Steps Goals"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/supportTextGray"
-            android:text="Target Steps: "/>
+            android:textColor="@color/titleBlue"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
 
-        <SeekBar
-            android:id="@+id/stepsSlider"
-            android:layout_width="200sp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/stepsCard"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="20000"
-            android:progressTint="@color/subtleBlue"
-            android:thumbTint="@color/titleBlue" />
+            android:layout_below="@id/stepsGoalsLabel"
+            app:cardBackgroundColor="#ECECEC"
+            android:visibility="visible">
 
-        <TextView
-            android:id="@+id/stepsValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/supportTextGray"
-            android:text="0"/>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weightGoalsLabel"
+                android:columnCount="3"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
 
-        <TextView
-            android:id="@+id/stepsUnit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/supportTextGray"
-            android:text="@string/unit_steps"/>
+                <!-- Daily Goal -->
+                <ImageView
+                    android:id="@+id/dailyGoalIcon_steps"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@android:drawable/ic_menu_view" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/dailyGoalLabel_steps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:text="Daily Goal"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-    <!--  Target Sleep  -->
-    <LinearLayout
-        android:id="@+id/sleepInput"
+                <TextView
+                    android:id="@+id/dailyGoalValue_steps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="10000 Steps"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <!--  Sleep Brief  -->
+    <RelativeLayout
+        android:id="@+id/sleep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
         android:gravity="center"
-        android:layout_below="@id/stepsInput"
-        android:layout_marginTop="40dp">
+        android:layout_below="@id/steps"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#ECECEC">
 
         <TextView
-            android:id="@+id/sleepLabel"
+            android:id="@+id/sleepGoalsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="3dp"
-            android:textSize="16sp"
+            android:text="Sleep Goals"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/supportTextGray"
-            android:text="Target Sleep: "/>
+            android:textColor="@color/titleBlue"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
 
-        <SeekBar
-            android:id="@+id/sleepSlider"
-            android:layout_width="200sp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sleepCard"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="12"
-            android:progressTint="@color/subtleBlue"
-            android:thumbTint="@color/titleBlue" />
+            android:layout_below="@id/sleepGoalsLabel"
+            app:cardBackgroundColor="#ECECEC"
+            android:visibility="visible">
 
-        <TextView
-            android:id="@+id/sleepValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/supportTextGray"
-            android:text="0"/>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleepGoalsLabel"
+                android:columnCount="3"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
 
-        <TextView
-            android:id="@+id/sleepUnit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/supportTextGray"
-            android:text="@string/unit_sleep"/>
+                <!-- Daily Goal -->
+                <ImageView
+                    android:id="@+id/dailyGoalIcon_sleep"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@android:drawable/ic_menu_view" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/dailyGoalLabel_sleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:text="Daily Goal"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-    <!--  Submit Button  -->
+                <TextView
+                    android:id="@+id/dailyGoalValue_sleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="8 Hours"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <!--  Save Button  -->
     <Button
         android:id="@+id/signUpButton"
         android:layout_width="304dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/sleepInput"
-        android:layout_alignStart="@+id/weightInput"
-        android:layout_alignEnd="@+id/weightInput"
+        android:layout_below="@+id/sleep"
+        android:layout_alignStart="@+id/profileLabel"
+        android:layout_alignEnd="@+id/profileLabel"
         android:layout_marginStart="60dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="60dp"
         android:backgroundTint="@color/titleBlue"
-        android:text="@string/submit_label" />
-
+        android:text="@string/save_label" />
 </RelativeLayout>

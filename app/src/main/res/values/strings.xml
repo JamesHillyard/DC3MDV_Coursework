@@ -77,4 +77,5 @@
     <string name="unit_weight">kg</string>
     <string name="unit_steps">Steps</string>
     <string name="unit_sleep">Hours</string>
+    <string name="save_label">Save</string>
 </resources>
