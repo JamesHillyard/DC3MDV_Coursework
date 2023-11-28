@@ -29,6 +29,16 @@
         android:layout_marginRight="25dp"
         android:hint="Username" />
 
+    <TextView
+        android:id="@+id/usernameErrorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:textColor="@color/errorRed"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="left"/>
+
     <!--  Password and Forgot Password Label  -->
     <EditText
         android:id="@+id/password"
@@ -53,6 +63,28 @@
         android:textColor="@color/supportTextGray"
         android:textSize="12sp" />
 
+    <TextView
+        android:id="@+id/passwordErrorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forgotPassword"
+        android:textColor="@color/errorRed"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="left"/>
+
+    <!-- Invalid Login Error -->
+    <TextView
+        android:id="@+id/loginErrorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/errorRed"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"/>
+
     <!--  Login Button  -->
     <Button
         android:id="@+id/loginButton"
@@ -62,7 +94,7 @@
         android:layout_alignStart="@+id/password"
         android:layout_alignEnd="@+id/password"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="65dp"
         android:layout_marginEnd="60dp"
         android:backgroundTint="@color/titleBlue"
         android:text="Login" />

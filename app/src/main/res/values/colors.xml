@@ -6,4 +6,5 @@
     <color name="titleBlue">#227FDC</color>
     <color name="subtleBlue">#689BCF</color>
     <color name="backgroundBlue">#E5EDF4</color>
+    <color name="errorRed">#A51308</color>
 </resources>

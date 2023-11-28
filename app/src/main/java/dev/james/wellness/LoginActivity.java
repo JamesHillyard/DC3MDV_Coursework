@@ -2,13 +2,17 @@ package dev.james.wellness;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.Html;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -16,24 +20,31 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import dev.james.wellness.util.ErrorMessageWatcher;
+import dev.james.wellness.util.FormValidation;
+
 public class LoginActivity extends AppCompatActivity {
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        // Login
         TextView username = findViewById(R.id.username);
         TextView password = findViewById(R.id.password);
         Button loginButton = findViewById(R.id.loginButton);
 
+        // Update the error messages on text view changes
+        username.addTextChangedListener(new ErrorMessageWatcher(findViewById(R.id.usernameErrorText)));
+        password.addTextChangedListener(new ErrorMessageWatcher(findViewById(R.id.passwordErrorText)));
+
+        // Login Button Functionality
         loginButton.setOnClickListener(view -> {
-            if (validCredentials(username, password)) {
-                Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(LoginActivity.this, "Username Or Password Incorrect", Toast.LENGTH_SHORT).show();
+            if (validateForm(username, password)) {
+                return; // Don't try and login if the validation failed
             }
+            performLogin(username, password);
         });
 
         // Terms Of Use and Privacy Policy
@@ -51,6 +62,38 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+    }
+
+    private void clearErrorMessage(int errorTextId) {
+        TextView usernameError = findViewById(errorTextId);
+        usernameError.setText("");
+    }
+
+    private boolean validateForm(TextView username, TextView password) {
+        boolean validationFailed = false;
+
+        if (FormValidation.verifyFieldNotEmpty(username)) {
+            TextView usernameError = findViewById(R.id.usernameErrorText);
+            usernameError.setText("Please enter a username");
+            validationFailed = true;
+        }
+        if (FormValidation.verifyFieldNotEmpty(password)) {
+            TextView usernameError = findViewById(R.id.passwordErrorText);
+            usernameError.setText("Please enter a password");
+            validationFailed = true;
+        }
+
+        return validationFailed;
+    }
+
+    private void performLogin(TextView username, TextView password) {
+        // Credential Verification
+        if (validCredentials(username, password)) {
+            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+        } else {
+            TextView usernameError = findViewById(R.id.loginErrorText);
+            usernameError.setText("Username or Password was Incorrect");
+        }
     }
 
     private boolean validCredentials(TextView username, TextView password) {
