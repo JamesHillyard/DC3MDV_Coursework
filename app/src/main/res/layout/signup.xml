@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
         android:layout_marginStart="25dp"
+        android:buttonTint="@color/titleBlue"
         android:text="Accept Terms and Conditions" />
 
     <!--  Signup Button  -->
