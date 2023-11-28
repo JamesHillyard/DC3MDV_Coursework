@@ -26,7 +26,7 @@
         android:layout_below="@id/profileLabel"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:background="#ECECEC"
+        android:background="@drawable/rounded_corner_popup"
         android:gravity="center"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
@@ -53,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/weightGoalsLabel"
+                android:background="@drawable/rounded_corner_popup"
                 android:columnCount="3"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp">
@@ -162,7 +163,7 @@
         android:layout_below="@id/weight"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="#ECECEC">
+        android:background="@drawable/rounded_corner_popup">
 
         <TextView
             android:id="@+id/stepsGoalsLabel"
@@ -187,6 +188,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/weightGoalsLabel"
+                android:background="@drawable/rounded_corner_popup"
                 android:columnCount="3"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp">
@@ -237,7 +239,7 @@
         android:layout_below="@id/steps"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="#ECECEC">
+        android:background="@drawable/rounded_corner_popup">
 
         <TextView
             android:id="@+id/sleepGoalsLabel"
@@ -262,6 +264,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sleepGoalsLabel"
+                android:background="@drawable/rounded_corner_popup"
                 android:columnCount="3"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp">
