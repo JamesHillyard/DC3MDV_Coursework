@@ -311,9 +311,16 @@
         android:layout_below="@+id/sleep"
         android:layout_alignStart="@+id/profileLabel"
         android:layout_alignEnd="@+id/profileLabel"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
         android:layout_marginEnd="60dp"
         android:backgroundTint="@color/titleBlue"
         android:text="@string/save_label" />
+
+    <include
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/navbar"
+        />
 </RelativeLayout>
