@@ -27,7 +27,7 @@
         android:inputType="text"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:hint="Username" />
+        android:hint="@string/username_label" />
 
     <TextView
         android:id="@+id/usernameErrorText"
@@ -37,7 +37,7 @@
         android:textColor="@color/errorRed"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:gravity="left"/>
+        android:gravity="start"/>
 
     <!--  Password and Forgot Password Label  -->
     <EditText
@@ -49,7 +49,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginTop="30dp"
-        android:hint="Password" />
+        android:hint="@string/password_label" />
 
     <TextView
         android:id="@+id/forgotPassword"
@@ -59,7 +59,7 @@
         android:layout_alignEnd="@+id/password"
         android:layout_marginEnd="10dp"
         android:gravity="end"
-        android:text="@string/forgotPassword_label"
+        android:text="@string/forgot_password_label"
         android:textColor="@color/supportTextGray"
         android:textSize="12sp" />
 
@@ -71,7 +71,7 @@
         android:textColor="@color/errorRed"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:gravity="left"/>
+        android:gravity="start"/>
 
     <!-- Invalid Login Error -->
     <TextView
@@ -97,7 +97,7 @@
         android:layout_marginTop="65dp"
         android:layout_marginEnd="60dp"
         android:backgroundTint="@color/titleBlue"
-        android:text="Login" />
+        android:text="@string/login_label" />
 
     <!--  Terms Of Use & Privacy Policy  -->
 
@@ -114,13 +114,13 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:textColor="@color/supportTextGray"
-            android:text="Terms Of Use"/>
+            android:text="@string/terms_of_use_label"/>
 
         <TextView
             android:id="@+id/divider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  |  " />
+            android:text="@string/divider_label" />
 
         <TextView
             android:id="@+id/privacyPolicy"
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:textColor="@color/supportTextGray"
-            android:text="Privacy Policy"/>
+            android:text="@string/privacy_policy_label"/>
 
     </LinearLayout>
 
@@ -139,7 +139,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/loginButton"
         android:layout_marginTop="65dp"
-        android:text="Sign Up"
+        android:text="@string/sign_up_label"
         android:textSize="16sp"
         android:textColor="@color/titleBlue"
         android:gravity="center"/>

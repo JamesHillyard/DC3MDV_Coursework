@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Wellness</string>
-    <string name="forgotPassword_label">Forgot Password?</string>
     <string name="terms_of_use">
         <![CDATA[
             <b>Terms of Service</b><br/>
@@ -72,10 +71,23 @@
             Thank you for using %1$s. Your privacy is important to us.
         ]]>
     </string>
+    <string name="login_label">Login</string>
     <string name="sign_up_label">Sign Up</string>
     <string name="submit_label">Submit</string>
-    <string name="unit_weight">kg</string>
-    <string name="unit_steps">Steps</string>
-    <string name="unit_sleep">Hours</string>
+    <string name="forgot_password_label">Forgot Password?</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
     <string name="save_label">Save</string>
+
+    <string name="terms_of_use_label">Terms Of Use</string>
+    <string name="privacy_policy_label">Privacy Policy</string>
+    <string name="divider_label">|</string>
+
+    <!--  Navigation Bar Labels  -->
+    <string name="nutrition_label_tab">Nutrition</string>
+    <string name="sleep_label_tab">Sleep</string>
+    <string name="steps_label_tab">Steps</string>
+    <string name="accept_terms_and_conditions_label">Accept Terms and Conditions</string>
+
+
 </resources>
