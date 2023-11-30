@@ -88,6 +88,14 @@
     <string name="sleep_label_tab">Sleep</string>
     <string name="steps_label_tab">Steps</string>
     <string name="accept_terms_and_conditions_label">Accept Terms and Conditions</string>
+    <string name="unit_steps">Steps</string>
+    <string name="unit_hours">Hours</string>
+    <string name="weight_unit">kg</string>
+    <string name="profile_label">Profile</string>
+    <string name="current_weight_label">Current Weight</string>
+    <string name="goal_weight_label">Goal Weight</string>
+    <string name="weekly_goal_label">Weekly Goal</string>
+    <string name="daily_goal_label">Daily Goal</string>
 
 
 </resources>

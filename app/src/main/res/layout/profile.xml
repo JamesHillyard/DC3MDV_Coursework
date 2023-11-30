@@ -11,7 +11,7 @@
         android:id="@+id/profileLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile"
+        android:text="@string/profile_label"
         android:textColor="@color/titleBlue"
         android:textSize="35sp"
         android:textStyle="bold"
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/weightGoalsLabel"
                 android:background="@drawable/rounded_corner_popup"
-                android:columnCount="3"
+                android:columnCount="4"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp">
 
@@ -72,19 +72,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="8dp"
-                    android:text="Current Weight"
+                    android:text="@string/current_weight_label"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/currentWeightValue_weight"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="16dp"
+                    android:ems="10"
+                    android:hint="90"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/currentWeightUnit_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp"
-                    android:text="90 kg"
+                    android:text="@string/weight_unit"
                     android:textColor="#808080"
                     android:textSize="16sp" />
 
@@ -102,19 +112,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="8dp"
-                    android:text="Goal Weight"
+                    android:text="@string/goal_weight_label"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/goalWeightValue_weight"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="16dp"
+                    android:ems="10"
+                    android:hint="80"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/goalWeightUnit_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp"
-                    android:text="80 kg"
+                    android:text="@string/weight_unit"
                     android:textColor="#808080"
                     android:textSize="16sp" />
 
@@ -132,19 +152,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="8dp"
-                    android:text="Weekly Goal"
+                    android:text="@string/weekly_goal_label"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/weeklyGoalValue_weight"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="16dp"
+                    android:ems="10"
+                    android:hint="0.5"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/weeklyGoalUnit_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp"
-                    android:text="Lose 0.5 kg/week"
+                    android:text="@string/weight_unit"
                     android:textColor="#808080"
                     android:textSize="16sp" />
 
@@ -189,7 +219,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/weightGoalsLabel"
                 android:background="@drawable/rounded_corner_popup"
-                android:columnCount="3"
+                android:columnCount="4"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp">
 
@@ -207,19 +237,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="8dp"
-                    android:text="Daily Goal"
+                    android:text="@string/daily_goal_label"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/dailyGoalValue_steps"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="16dp"
+                    android:ems="10"
+                    android:hint="10000"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/dailyGoalUnits_steps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp"
-                    android:text="10000 Steps"
+                    android:text="@string/unit_steps"
                     android:textColor="#808080"
                     android:textSize="16sp" />
 
@@ -265,7 +305,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sleepGoalsLabel"
                 android:background="@drawable/rounded_corner_popup"
-                android:columnCount="3"
+                android:columnCount="4"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp">
 
@@ -283,19 +323,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="8dp"
-                    android:text="Daily Goal"
+                    android:text="@string/daily_goal_label"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/dailyGoalValue_sleep"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:ems="10"
+                    android:hint="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/dailyGoalUnits_sleep"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp"
-                    android:text="8 Hours"
+                    android:text="@string/unit_hours"
                     android:textColor="#808080"
                     android:textSize="16sp" />
 
@@ -311,7 +361,7 @@
         android:layout_below="@+id/sleep"
         android:layout_alignStart="@+id/profileLabel"
         android:layout_alignEnd="@+id/profileLabel"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:backgroundTint="@color/titleBlue"
